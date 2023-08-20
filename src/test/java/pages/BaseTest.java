@@ -27,7 +27,7 @@ public class BaseTest {
     protected WebDriverWait wait;
 
     public BaseTest() {
-        System.out.println("BaseTestConstructer");
+        //System.out.println("BaseTestConstructer");// Çalışma hiyerşisini görmek içindi, silinebilir.
         this.driver = Driver.getDriver(Device.SAMSUNG_GALAXY_FAN, Application.MONEYPAY);
         this.wait = new WebDriverWait(driver, 10);
     }
@@ -175,9 +175,7 @@ public class BaseTest {
         String isim = "C:/Users/work/Desktop/Emek Projeleri/Appium_MoneyPAY/screenShots/" + name + "_" + LocalDateTime.now()
                 .format(DateTimeFormatter.ofPattern("dd_MM_yyyy")) + ".png";
 
-        TakesScreenshot takesScreenshot = ((TakesScreenshot) driver);
-
-        File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
+        File source = driver.getScreenshotAs(OutputType.FILE);// TakeScreenshot sınıfına cast etmeden çalışıyor artık :D
         File target = new File(isim);
 
         try {

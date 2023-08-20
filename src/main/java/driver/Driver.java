@@ -20,8 +20,12 @@ public class Driver {
         service.start();
     }
 
+    public static AppiumDriver<?> getDriver() {
+        return getDriver(Device.SAMSUNG_GALAXY_FAN, Application.MONEYPAY);// Default driver, Samsung cihaz ve MoneyPay uygulamasıyla başlar
+    }
+
     public static AppiumDriver<?> getDriver(Device device, Application app) {
-        if (driver == null) {
+        if (driver == null) {// Eğer önceden atanan driver varsa yeniden bir driver atanması önlenir: Singleton Driver Model
             startAppium();
             String apkPath = "src/test/resources/";// Apk nın olduğu adres
             DesiredCapabilities capabilities = new DesiredCapabilities();

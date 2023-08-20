@@ -3,7 +3,6 @@ package runner;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
-
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "stepdefs",
@@ -15,4 +14,6 @@ import io.cucumber.testng.CucumberOptions;
 )
 public class Runner extends AbstractTestNGCucumberTests {
     // TestNG metotları yazılabilir, Cucumber dan önce çalışırlar.
+    // xml den browser parametresi alarak paralel test için kullanılabilir.
+    // Kullanım için bak: AlternativeUsage framework.
 }
