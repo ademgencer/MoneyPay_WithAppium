@@ -4,4 +4,4 @@
 ## Hook Class ta senaryo sonunda ekran fotoğrafı alınarak senaryoya attach edilmiş,
 ## Html ve Cucumber Report ile otomatik rapor oluşturulmuştur.
 
-![MoneyPayApplicationTest](https://github.com/ademgencer/MoneyPay_WithAppium/blob/master/screenShots/MoneyPayApp_Gif_edit.gif)
+![MoneyPayApplicationTest](https://github.com/ademgencer/MoneyPay_WithAppium/blob/master/screenShots/MoneyPayApp_Gif.gif)
